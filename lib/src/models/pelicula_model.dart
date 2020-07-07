@@ -25,6 +25,7 @@ class Pelicula {
   double voteAverage;
   String overview;
   String releaseDate;
+  String uniqueId;
 
   Pelicula({
     this.popularity,
@@ -65,6 +66,14 @@ class Pelicula {
       return 'https://image.shutterstock.com/image-vector/picture-vector-icon-no-image-600w-1350441335.jpg';
     }else{
       return 'https://image.tmdb.org/t/p/w500/$posterPath';
+    }
+  }
+
+  getBackgroundImg(){
+    if(posterPath == null ){
+      return 'https://image.shutterstock.com/image-vector/picture-vector-icon-no-image-600w-1350441335.jpg';
+    }else{
+      return 'https://image.tmdb.org/t/p/w500/$backdropPath';
     }
   }
 }
